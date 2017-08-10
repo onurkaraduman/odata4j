@@ -207,10 +207,10 @@ public abstract class AbstractODataConsumer implements ODataConsumer {
     @Override
     public EdmEntitySet findEdmEntitySet(String entitySetName) {
       EdmEntitySet rt = super.findEdmEntitySet(entitySetName);
-      if (rt == null && delegate != EdmDataServices.EMPTY) {
-        refreshDelegate();
-        rt = super.findEdmEntitySet(entitySetName);
-      }
+      //if (rt == null && delegate != EdmDataServices.EMPTY) {
+      // refreshDelegate();
+      // rt = super.findEdmEntitySet(entitySetName);
+      //}
       return rt;
     }
   }
